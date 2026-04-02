@@ -95,6 +95,7 @@ func snake(s string) string {
 func title(s string) string {
 	str := strings.Fields(s)
 	for i := range str {
+		str[i] = strings.ToLower(str[i])
 		if i > 1 && (str[i] == "a" || str[i] == "an" || str[i] == "the" || str[i] == "and" || str[i] == "is") {
 			str[i] = strings.ToLower(str[i])
 		} else if i > 1 && (str[i] == "but" || str[i] == "or" || str[i] == "for" || str[i] == "nor") {
